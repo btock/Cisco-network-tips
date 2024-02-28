@@ -1,6 +1,6 @@
 # Basic VLAN Configuration
-Switch> ena
-Switch# show vlan brief (muestra las vlans en los puertos)
+- Switch> ena
+- Switch# show vlan brief (muestra las vlans en los puertos)
 Switch# config t
 Switch (config)# vlan “numero de vlan a crear”
 Switch (config-vlan)#  name “nombre de vlan”
