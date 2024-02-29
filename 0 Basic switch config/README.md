@@ -61,6 +61,15 @@ login local
 exit
 
 !
+interface vlan1
+
+ip address 192.168.1.36 255.255.255.0
+
+no shutdown
+
+exit
+
+!
 
 enable secret ciscotest
 
