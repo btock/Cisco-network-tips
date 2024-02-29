@@ -1,4 +1,3 @@
-en
 config t
 !
 !
@@ -30,6 +29,11 @@ login local
 !
 exit
 !
+interface vlan1
+ip address 192.168.1.36 255.255.255.0
+no shutdown
+exit
+!
 enable secret ciscotest
 username beto secret ciscotest
 service password-encryption
@@ -44,3 +48,15 @@ exit
 copy running-config startup-config
 
 !
+
+Hay cuatro pasos obligatorios para habilitar el soporte de SSH en un router del Cisco IOS:
+
+1. Configure el comando hostname.
+
+2. Configure el dominio DNS.
+
+3. Genere la clave SSH.
+
+4. Habilite la compatibilidad con el transporte SSH para el vtys.
+
+Si desea que un dispositivo actúe como cliente de SSH al otro, puede agregar SSH a un segundo dispositivo llamado Reed. Esto pone a estos dispositivos en una configuración de cliente y servidor, en la que Carter actúa como servidor y Reed como cliente. La configuración de cliente de SSH del Cisco IOS en Reed es la misma que la requerida para la configuración de servidor de SSH en Carter.
