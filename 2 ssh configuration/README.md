@@ -1,5 +1,6 @@
-ena
+## SSH configuration
 
+ena
 config t
 
 hostname sshconfigtest
