@@ -1,10 +1,11 @@
-
-
+![0 basic SW config](https://github.com/btock/Cisco-network-tips/assets/14008255/a1f5da29-ae3a-4966-933c-f26169aeca0c)
 
 config t
+
 !
-!
+
 hostname BasicSW
+!
 !
 !
 banner motd #this is bto's company switch, kindly Stay out!#
