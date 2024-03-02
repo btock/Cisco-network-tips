@@ -1,4 +1,5 @@
 ## SSH configuration
+![ssh](https://github.com/btock/Cisco-network-tips/assets/14008255/6d60f695-21a6-4df5-a301-38f3bae58377)
 ***
 ena
 
