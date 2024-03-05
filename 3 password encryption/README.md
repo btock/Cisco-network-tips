@@ -13,7 +13,7 @@ Switch(config)#username beto2 password ciscotest
 
 
 ## Configurar password para la consola exec mode (outband connection) console 0
-'''
+```
 Switch>ena
 Switch# config t (configure from terminal)
 Switch (config)#line console 0
@@ -22,9 +22,10 @@ Switch (config-line)# login (commando para decirle al usuario que use password p
 Switch (config-line)# exit
 Switch (config)# exit
 Switch# show run (para ver la configuración en RAM del router y validar si tiene password)
-'''
+```
  
-## Configurar password para in band connection VTY 
+## Configurar password para in band connection VTY
+```
 Switch>ena
 Switch# config t (configure from terminal)
 Switch (config)#line VTY 0
@@ -33,6 +34,7 @@ Switch (config-line)# login (commando para forzar a que use password para logear
 Switch (config-line)# exit
 Switch (config)# exit
 Switch# show run (para ver la configuración en RAM del router y validar si tiene password)
+```
 
  
 
