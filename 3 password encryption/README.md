@@ -1,10 +1,10 @@
 # Password Encryption
 ***
+```
 "Secret" is a command to encrypt the password automatically
-
 Switch(config)#username beto secret ciscotest
-
 Switch(config)#username beto2 password ciscotest
+```
 
 
 ![pass encryption](https://github.com/btock/Cisco-network-tips/assets/14008255/35749b28-be13-4887-b6f5-4fa674c1695b)
@@ -39,6 +39,7 @@ Switch# show run (para ver la configuración en RAM del router y validar si tien
  
 
 ## Poner password a los restantes VTY 1-4
+```
 Switch>ena
 Switch# config t (configure from terminal)
 Switch (config)#line vty 1 4
@@ -47,25 +48,29 @@ Switch (config-line)# login (commando para forzar a que use password para logear
 Switch (config-line)# exit
 Switch (config)# exit
 Switch# show run (para ver la configuración en RAM del router y validar si tiene password)
- 
+```
  
 ## Configurar password para la consola privileged exec mode 
 Puede elegirse entre encriptarlo y no encriptarlo
+```
 Switch>ena
 Switch# config t (configure from terminal)
 Switch (config)#enable password MyEnablePassword (commando para configurar el password en enable sin encriptar
 Switch (config)# enable secret MySecretPassword (commando para encriptar el password)
 Switch (config)# exit
 Switch# show run
+```
  
 Si se configuran los dos password el secret tendrá prioridad ante el password
 
 ## Encriptar todos los passwords console, vty secret, password:
+```
 Switch>ena
 Switch# config t (configure from terminal)
 Switch (config)# service password-encryption (encrypt all the password in router)
 Control c
 Switch# show run
+```
  
  
 Al hacer estas nuevas configuraciones siempre copiar todo a la NVRAM
