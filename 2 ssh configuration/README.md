@@ -15,6 +15,8 @@ crypto key generate rsa
 
 username admin secret test
 
+username admin2 secret ciscotest
+
 line vty 0 5
 
 transport input ssh
