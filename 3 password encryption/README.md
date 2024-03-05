@@ -3,6 +3,7 @@
 "Secret" is a command to encrypt the password automatically
 
 Switch(config)#username beto secret ciscotest
+
 Switch(config)#username beto2 password ciscotest
 
 
