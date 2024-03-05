@@ -1,8 +1,10 @@
 # Password Encryption
 ***
-Secret command encrypt the password automatically
+"Secret" is a command to encrypt the password automatically
 
-R1(config)#username tom secret Cisco
+Switch(config)#username beto secret ciscotest
+Switch(config)#username beto2 password ciscotest
+
 
 ![pass encryption](https://github.com/btock/Cisco-network-tips/assets/14008255/35749b28-be13-4887-b6f5-4fa674c1695b)
 
