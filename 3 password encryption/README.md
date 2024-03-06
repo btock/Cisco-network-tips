@@ -17,12 +17,14 @@ Switch(config)#username beto2 password ciscotest
 Switch>ena
 Switch# config t (configure from terminal)
 Switch (config)#line console 0
-Switch (config-line)# password MyConsolePassword (commando password seguido del password a configurar)
+Switch (config-line)# password cisctotest (commando password seguido del password a configurar)
 Switch (config-line)# login (commando para decirle al usuario que use password para logearse al router)
 Switch (config-line)# exit
 Switch (config)# exit
 Switch# show run (para ver la configuración en RAM del router y validar si tiene password)
 ```
+ ![console password](https://github.com/btock/Cisco-network-tips/assets/14008255/be0bae41-d8ca-4690-8b62-55c04708e151)
+
  
 ## Configurar password para in band connection VTY
 ```
