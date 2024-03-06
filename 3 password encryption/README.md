@@ -30,27 +30,17 @@ Switch# show run (para ver la configuración en RAM del router y validar si tien
 ```
 Switch>ena
 Switch# config t (configure from terminal)
-Switch (config)#line VTY 0
-Switch (config-line)# password MyVTY0Password (commando password seguido del password a configurar)
+Switch (config)#line VTY 0 5
+Switch (config-line)# password ciscotest (commando password seguido del password a configurar)
 Switch (config-line)# login (commando para forzar a que use password para logearse al router)
 Switch (config-line)# exit
 Switch (config)# exit
 Switch# show run (para ver la configuración en RAM del router y validar si tiene password)
 ```
+![vty password](https://github.com/btock/Cisco-network-tips/assets/14008255/5e37bbe9-61a7-4138-a6d6-5ec4211e46b2)
 
- 
-
-## Poner password a los restantes VTY 1-4
-```
-Switch>ena
-Switch# config t (configure from terminal)
-Switch (config)#line vty 1 4
-Switch (config-line)# password MyVTY14Password (commando password seguido del password a configurar)
-Switch (config-line)# login (commando para forzar a que use password para logearse al router)
-Switch (config-line)# exit
-Switch (config)# exit
-Switch# show run (para ver la configuración en RAM del router y validar si tiene password)
-```
+1. VTY es la puerta de enlace para la administración remota de dispositivos de red a través de una conexión de red, generalmente utilizando protocolos como Telnet o SSH (Secure Shell).
+2. Permite a los administradores iniciar sesión en el dispositivo y realizar tareas de configuración, monitoreo y solución de problemas sin estar físicamente presentes en el lugar donde está ubicado el dispositivo.
  
 ## Configurar password para la consola privileged exec mode 
 Puede elegirse entre encriptarlo y no encriptarlo
