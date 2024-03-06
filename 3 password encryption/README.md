@@ -67,10 +67,12 @@ Switch# show run
 ```
 ![encryption password](https://github.com/btock/Cisco-network-tips/assets/14008255/6ae60489-f43d-4049-b145-85b02393dafd)
 
-##remove passwords
+## Remove passwords
  
  
 Al hacer estas nuevas configuraciones siempre copiar todo a la NVRAM
+```
 Switch# copy running-config startup-config o copy run start
 Switch # show startup-config
+```
 
