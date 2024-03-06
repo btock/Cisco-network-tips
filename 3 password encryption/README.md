@@ -53,7 +53,9 @@ Switch (config)# exit
 Switch# show run
 ```
  
-Si se configuran los dos password el secret tendrá prioridad ante el password
+**Si se configuran los dos password el secret tendrá prioridad ante el password**
+
+![privileged password](https://github.com/btock/Cisco-network-tips/assets/14008255/f48238d0-5b76-4843-9359-455bf23d8fbc)
 
 ## Encriptar todos los passwords console, vty secret, password:
 ```
@@ -63,6 +65,9 @@ Switch (config)# service password-encryption (encrypt all the password in router
 Control c
 Switch# show run
 ```
+![encryption password](https://github.com/btock/Cisco-network-tips/assets/14008255/6ae60489-f43d-4049-b145-85b02393dafd)
+
+##remove passwords
  
  
 Al hacer estas nuevas configuraciones siempre copiar todo a la NVRAM
