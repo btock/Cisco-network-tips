@@ -146,3 +146,73 @@ TrunkSw#
 ```
 ## 3- Trunk creation and interface assignation
 ***
+switch 0 (TrunkSW)
+```
+TrunkSw>ena
+Password: 
+TrunkSw#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+TrunkSw(config)#int fa0/24
+TrunkSw(config-if)#switchport trunk allowed vlan 10,20
+TrunkSw(config-if)#switchport mode trunk
+TrunkSw(config-if)#do sh interfaces trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Fa0/24      on           802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Fa0/24      10,20
+
+Port        Vlans allowed and active in management domain
+Fa0/24      10,20
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Fa0/24      20
+
+TrunkSw(config-if)#exit
+TrunkSw(config)#exit
+TrunkSw#
+%SYS-5-CONFIG_I: Configured from console by console
+
+TrunkSw#copy runni
+TrunkSw#copy running-config startu
+TrunkSw#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+TrunkSw#
+```
+switch 1 (Trunk2Sw)
+```
+Trunk2Sw>ena
+Password: 
+Trunk2Sw#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Trunk2Sw(config)#int fa0/24
+Trunk2Sw(config-if)#switchport trunk allowed vlan 10,20
+Trunk2Sw(config-if)#switchport mode trunk
+Trunk2Sw(config-if)#do sh interfaces trunk
+Port        Mode         Encapsulation  Status        Native vlan
+Fa0/24      on           802.1q         trunking      1
+
+Port        Vlans allowed on trunk
+Fa0/24      10,20
+
+Port        Vlans allowed and active in management domain
+Fa0/24      10,20
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Fa0/24      20
+
+Trunk2Sw(config-if)#exit
+Trunk2Sw(config)#exit
+Trunk2Sw#
+%SYS-5-CONFIG_I: Configured from console by console
+
+Trunk2Sw#copy runni
+Trunk2Sw#copy running-config startu
+Trunk2Sw#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Trunk2Sw#
+```
