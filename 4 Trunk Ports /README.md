@@ -216,3 +216,14 @@ Building configuration...
 [OK]
 Trunk2Sw#
 ```
+## 4- Trunk interface Validation 
+***
+Trunk vlan 10
+Ping succesfully between PC1 to PC4 & PC5 (VLAN10)
+
+![PC1 to PC5](https://github.com/btock/Cisco-network-tips/assets/14008255/0abb2bb6-dee9-4290-b865-5360b8819aec)
+
+Trunk vlan 10
+Ping succesfully between PC3 to PC6 & PC7 (VLAN20)
+
+![PC3 to PC6](https://github.com/btock/Cisco-network-tips/assets/14008255/7744021e-8fed-48de-8ab1-3c58b14bb6a1)
