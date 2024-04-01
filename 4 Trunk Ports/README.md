@@ -1,11 +1,11 @@
-TRUNK PORTS
+# TRUNK PORTS
 
 Allow devices attached to different switches but assigned to the same vlan group to communicate with one another across the switched topology
 Permita que los dispositivos conectados a diferentes conmutadores pero asignados al mismo grupo vlan se comuniquen entre sí a través de la topología conmutada
 No son miembros de alguna vlan
 Dirigie el trafico de un switch a switch por todas las vlans
 
-Crear un trunk puerto
+## Crear un trunk puerto
 
 Para que un Puerto sea trunk se requiere conectarse a otro switch, es switch a switch
 Switch> ena
@@ -16,6 +16,10 @@ Switch (config-if)# switchport mode trunk (para eligir la opcion trunk en el pue
 Switch (config-if)# “ctrl+c”
 Switch# show interface trunk (muestra todas las configuracion trunk en el switch
 Esta configuración se debe de hacer en los dos switches en los dos puertos conectados
+
+## Trunk Network Diagram
+***
+![Trunk network diagram](https://github.com/btock/Cisco-network-tips/assets/14008255/68225c8f-4ce4-4c52-8570-d2db7acd96b3)
 
 ## 1- configuracion base de switch
 ***
