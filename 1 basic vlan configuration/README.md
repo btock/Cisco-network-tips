@@ -16,6 +16,11 @@ Switch# show vlan brief (para ver las vlans creadas)
 2. Vlan del 1002 al 1005 estan reservadas se crean en vlan.dat
 3. Vlan del 1006 al 4096 son vlan extendidas y se crearn en running config
 
-VTP es vlan trunking protocol, para resolver el problema de vtp debemos de ponerlo en modo transparente
+VTP es vlan trunking protocol, para resolver el problema de vtp debemos de ponerlo en modo transparente, con esto podemos crear vlans entre el 1006 y 4096
+
+```
+Switch (config)# vtp mode transparent
+setting device to VTP transparent mode for vlans
+```
 
 ![basic vlan configuration](https://github.com/btock/Cisco-network-tips/assets/14008255/6782b12c-1a4f-456c-bf87-4e5726c24b6c)
