@@ -12,5 +12,10 @@ Switch (config-vlan)#exit
 Switch (config)# (presionamos ctrl+c para salir del modo config)
 Switch# show vlan brief (para ver las vlans creadas)
 ```
+Vlans del 1 al 1005 son las que podemos asignar se crean en vlan.dat
+Vlan del 1002 al 1005 estan reservadas se crean en vlan.dat
+Vlan del 1006 al 4096 son vlan extendidas y se crearn en running config
+
+VTP es vlan trunking protocol, para resolver el problema de vtp debemos de ponerlo en modo transparente
 
 ![basic vlan configuration](https://github.com/btock/Cisco-network-tips/assets/14008255/6782b12c-1a4f-456c-bf87-4e5726c24b6c)
