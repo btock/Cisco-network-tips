@@ -63,9 +63,11 @@ Switch1#
 1- VLAN 10
   - assigned to interface fa0/1, fa0/2
   - name HRvlan
+
 2- VLAN 20
   - assigned to interface fa0/10, fa0/11
   - name HRvlan
+
 3- vlan 30
   - assigned to interface fa0/20, fa0/21
   - name HRvlan
