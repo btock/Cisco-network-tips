@@ -145,4 +145,55 @@ Switch1#
 switch1 should have the trunk interface where the router is connected
 - Gi0/1
 ```
+Switch1>ena
+Password: 
+Switch1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch1(config)#int Gi0/1
+Switch1(config-if)#switchport trunk allowed vlan 10,20,30
+Switch1(config-if)#switchport mode trunk
+Switch1#sh int Gi0/1 switchport
+Name: Gig0/1
+Switchport: Enabled
+Administrative Mode: trunk
+Operational Mode: down
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 1 (default)
+Voice VLAN: none
+Administrative private-vlan host-association: none
+Administrative private-vlan mapping: none
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk encapsulation: dot1q
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk private VLANs: none
+Operational private-vlan: none
+Trunking VLANs Enabled: 10,20,30
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+Protected: false
+Unknown unicast blocked: disabled
+Unknown multicast blocked: disabled
+Appliance trust: none
 ```
+## 4- Router basic configuration
+***
+1- hostname
+  * Router1
+1- usuario y contraseña
+  * user= beto
+  * pass= ciscotest
+2- MOTD
+  * this is bto's company switch, kindly Stay out!
+3- enable secret password
+  * pass= ciscotest
+4- domain name
+  * beto.com
+6- ssh version 2
+7- Secure console port
+  * pass= ciscotest
+8- secure vty 0-4
+  * pass= ciscotest
