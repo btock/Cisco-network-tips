@@ -209,5 +209,25 @@ Appliance trust: none
 
 10- Interface Gi0/0/0
   * Enable
+```
+Router>ena
+Router#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname Router1
+Router1(config)#banner motd #this is bto's company router, kindly stay out!# 	
+Router1(config)#interface gi0/0/0
+Router1(config-if)#no shut
+Router1(config-if)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0, changed state to up
+
+Router1(config-if)#exit
+Router1(config)#
+Router1(config)#
+Router1#
+```
+## 5- Router Subinterfaces
+***
       
 
