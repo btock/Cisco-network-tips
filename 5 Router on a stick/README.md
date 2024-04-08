@@ -183,17 +183,28 @@ Appliance trust: none
 ***
 1- hostname
   * Router1
-1- usuario y contraseña
+    
+2- usuario y contraseña
   * user= beto
   * pass= ciscotest
-2- MOTD
+
+3- MOTD
   * this is bto's company switch, kindly Stay out!
-3- enable secret password
+
+4- enable secret password
   * pass= ciscotest
-4- domain name
+
+5- domain name
   * beto.com
+
 6- ssh version 2
+
 7- Secure console port
   * pass= ciscotest
 8- secure vty 0-4
   * pass= ciscotest
+
+9- no ip domain lookup 
+  * Router(config)# no ip domain-lookup
+
+
