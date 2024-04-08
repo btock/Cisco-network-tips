@@ -207,4 +207,7 @@ Appliance trust: none
 9- no ip domain lookup 
   * Router(config)# no ip domain-lookup
 
+10- Interface Gi0/0/0
+  * Enable
+      
 
