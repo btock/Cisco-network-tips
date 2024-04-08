@@ -227,7 +227,64 @@ Router1(config)#
 Router1(config)#
 Router1#
 ```
-## 5- Router Subinterfaces
+## 5- Router Subinterfaces, encapsulation & ip assignation
 ***
-      
+```
+Router1>ena
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#interface gigabitethernet 0/0/0.10
+Router1(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0.10, changed state to up
 
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.10, changed state to up
+
+Router1(config-subif)#interface gigabitethernet 0/0/0.20
+Router1(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0.20, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.20, changed state to up
+
+Router1(config-subif)#interface gigabitethernet 0/0/0.30
+Router1(config-subif)#
+%LINK-5-CHANGED: Interface GigabitEthernet0/0/0.30, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0.30, changed state to up
+
+Router1(config-subif)#do sh ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0/0   unassigned      YES unset  up                    up 
+GigabitEthernet0/0/0.10unassigned      YES unset  up                    up 
+GigabitEthernet0/0/0.20unassigned      YES unset  up                    up 
+GigabitEthernet0/0/0.30unassigned      YES unset  up                    up 
+GigabitEthernet0/0/1   unassigned      YES unset  administratively down down 
+GigabitEthernet0/0/2   unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+Router1(config-subif)#
+Router1(config-subif)#interface gigabitethernet 0/0/0.10
+Router1(config-subif)#encapsulation dot1q 10
+Router1(config-subif)#ip address 192.168.1.1 255.255.255.0
+Router1(config)#interface gigabitethernet 0/0/0.20
+Router1(config-subif)#encapsulation dot1q 20
+Router1(config-subif)#ip address 172.16.0.1 255.255.255.0
+Router1(config-subif)#interface gigabitethernet 0/0/0.30
+Router1(config-subif)#encapsulation dot1q 30
+Router1(config-subif)#ip address 10.0.0.1 255.0.0.0
+Router1(config-subif)#
+Router1#wr mem
+Building configuration...
+[OK]
+Router1#
+Router1#sh ip int brief
+Interface              IP-Address      OK? Method Status                Protocol 
+GigabitEthernet0/0/0   unassigned      YES unset  up                    up 
+GigabitEthernet0/0/0.10192.168.1.1     YES manual up                    up 
+GigabitEthernet0/0/0.20172.16.0.1      YES manual up                    up 
+GigabitEthernet0/0/0.3010.0.0.1        YES manual up                    up 
+GigabitEthernet0/0/1   unassigned      YES unset  administratively down down 
+GigabitEthernet0/0/2   unassigned      YES unset  administratively down down 
+Vlan1                  unassigned      YES unset  administratively down down
+Router1#
+```      
+## 6- ping test
+***
