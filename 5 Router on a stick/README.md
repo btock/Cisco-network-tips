@@ -272,9 +272,9 @@ Router1#
 ```      
 ## 6- ping test
 ***
-PC0 (192.168.1.10 vlan 10) to PC3 (172.16.0.10 vlan 20) & PC4 (10.0.0.10 vlan 30).
-PC3 (172.16.0.10 vlan 20) to PC1 (192.168.1.11 vlan 10) & PC5 (10.0.0.11 vlan 30).
-PC5 (10.0.0.11 vlan 30) to PC0 (192.168.1.10 vlan 10) & PC2 (172.16.0.11 vlan 20)
+1- PC0 (192.168.1.10 vlan 10) to PC3 (172.16.0.10 vlan 20) & PC4 (10.0.0.10 vlan 30).
+2- PC3 (172.16.0.10 vlan 20) to PC1 (192.168.1.11 vlan 10) & PC5 (10.0.0.11 vlan 30).
+3- PC5 (10.0.0.11 vlan 30) to PC0 (192.168.1.10 vlan 10) & PC2 (172.16.0.11 vlan 20)
 
 ![ping test](https://github.com/btock/Cisco-network-tips/assets/14008255/12e5f218-5415-4152-a6db-3d28f671d6f5)
 
