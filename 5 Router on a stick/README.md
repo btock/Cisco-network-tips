@@ -187,31 +187,11 @@ Appliance trust: none
 ***
 1- hostname
   * Router1
-    
-2- usuario y contraseña
-  * user= beto
-  * pass= ciscotest
-
-3- MOTD
+   
+2- MOTD
   * this is bto's company switch, kindly Stay out!
 
-4- enable secret password
-  * pass= ciscotest
-
-5- domain name
-  * beto.com
-
-6- ssh version 2
-
-7- Secure console port
-  * pass= ciscotest
-8- secure vty 0-4
-  * pass= ciscotest
-
-9- no ip domain lookup 
-  * Router(config)# no ip domain-lookup
-
-10- Interface Gi0/0/0
+3- Interface Gi0/0/0
   * Enable
 ```
 Router>ena
@@ -292,3 +272,14 @@ Router1#
 ```      
 ## 6- ping test
 ***
+PC0 (192.168.1.10 vlan 10) to PC3 (172.16.0.10 vlan 20) & PC4 (10.0.0.10 vlan 30).
+PC3 (172.16.0.10 vlan 20) to PC1 (192.168.1.11 vlan 10) & PC5 (10.0.0.11 vlan 30).
+PC5 (10.0.0.11 vlan 30) to PC0 (192.168.1.10 vlan 10) & PC2 (172.16.0.11 vlan 20)
+
+![ping test](https://github.com/btock/Cisco-network-tips/assets/14008255/12e5f218-5415-4152-a6db-3d28f671d6f5)
+
+
+
+
+
+
