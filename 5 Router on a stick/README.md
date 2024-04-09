@@ -1,4 +1,8 @@
 # Router on a Stick
+Router-on-a-stick (ROAS) is a technique to connect a router with a single physical link to a switch and perform IP routing between VLANs. From the switch's perspective, this physical link is configured as a trunk port allowing all VLANs that are going to be routed. From the router's perspective, this physical interface is represented as multiple virtual sub-interfaces, one for each VLAN. An IP address from each VLAN is then configured on each sub-interface and the router performs IP routing between connected networks
+
+<img width="260" alt="5 router on a stick" src="https://github.com/btock/Cisco-network-tips/assets/14008255/5aa48eb5-37a8-408e-b604-0e0d1113805e">
+
 ***
 ## 1- configuracion base de switch
 ***
