@@ -56,4 +56,34 @@ Building configuration...
 [OK]
 Switch1#
 ```
-# 2- 
+# 2- Trunk Port Assignation for etherchannel interfaces
+***
+## Switch1
+```
+Switch1>ena
+Password: 
+
+Switch1(config)#int range gi0/1-2, fa0/23-24
+Switch1(config-if-range)#switchport mode trunk
+
+Switch1(config-if-range)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/23, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/23, changed state to up
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to up
+
+Switch1(config-if-range)#switchport nonegotiate
+Switch1(config-if-range)#
+```
+## Switch2
