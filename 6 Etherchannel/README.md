@@ -303,10 +303,9 @@ Group  Port-channel  Protocol    Ports
 1      Po1(SU)           PAgP   Fa0/23(P) Fa0/24(P) 
 
 Switch1#
-
-'''
+```
 ### Switch 3
-'''
+```
 Switch3#sh etherchannel summary
 Flags:  D - down        P - in port-channel
         I - stand-alone s - suspended
@@ -327,7 +326,6 @@ Group  Port-channel  Protocol    Ports
 1      Po1(SU)           PAgP   Fa0/23(P) Fa0/24(P) 
 
 Switch3#
-
 ```
 ## 2- port channel 2
       * LACP
