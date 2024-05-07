@@ -4,7 +4,7 @@ EtherChannel es una tecnología de agregación de enlaces que agrupa varios enla
 
 La tecnología de EtherChannel hace posible combinar la cantidad de enlaces físicos entre los switches para aumentar la velocidad general de la comunicación switch a switch.
 ***
-##Network diagram
+## Network diagram
 
 ![etherchannel](https://github.com/btock/Cisco-network-tips/assets/14008255/3954519f-33bd-4193-8273-a5139dba6649)
 
